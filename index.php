@@ -1,11 +1,11 @@
 <?php get_header() ?>
 
 <div class="cf">
-<section id="slide">
+<section id="slide" >
   <ul class="rslides">
-	<li>
+	<li >
 	  <img src="<?php bloginfo('template_directory') ?>/img/slide1.jpg">
-	  <div class="slide-text">				
+	  <div class="slide-text">
 	   	<h1>Welcome to Ideas Design</h1>
 	    <p>Welcome to our website, let us help you to reach your personal goals and professional objectives.</p>
     	<p>We are a small business (making big projects) specialized in web design, graphic and publicity. We are not ALL about gaining your business, but ALL about helping you reach your goals.</p>
@@ -14,7 +14,7 @@
 	</li>
 	<li>
 	  <img src="<?php bloginfo('template_directory') ?>/img/slide2.jpg">
-	  <div class="slide-text">				
+	  <div class="slide-text">
 	   	<h1>We don't know limits</h1>
 	    <p>Do you have a big project? Don't worry! The phrase "I Can't" is not in our dictionary.</p>
 	   	<p>Do you have a small or personal project, let us help in transforming your project into something amazing.<p>
@@ -44,7 +44,7 @@
     <p>Graphic Deisgn</p>
   </section>
   <section class="span4 serv">
-  	<div class="service-icon"> 
+  	<div class="service-icon">
     <a href="<?php bloginfo('url') ?>/services/publicity/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/user.png" alt=""></a>
     </div>
     <p>Publicity</p>

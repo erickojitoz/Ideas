@@ -1,4 +1,4 @@
-<?php get_header() ?>
+<?php //get_header() ?>
 
 <div class="cf">
 <section id="slide">

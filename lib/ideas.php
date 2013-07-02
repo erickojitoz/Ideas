@@ -5,7 +5,7 @@ function Ideas_configuracion(){
 }
 
 function title_pane(){
-
+	include(get_template_directory().'/lib/title_pane.php');
 }
 
 function redes_pane(){

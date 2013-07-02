@@ -3,9 +3,9 @@
 <div class="cf">
 <section id="slide" >
   <?php
-  $url = get_template_directory().'/lib/slide.json';
-  if(file_exists($url)){
-    $slideJson = json_decode(file_get_contents($url),true);
+
+  if(get_option('ideas_slide')){
+    $slideJson = json_decode(get_option('ideas_slide'),true);
   ?>
   <ul class="rslides">
     <?php foreach ($slideJson as $value) { ?>

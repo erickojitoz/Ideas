@@ -48,27 +48,27 @@
   </section>
   <section id="top-icons">
     <div>
-      <a href="<?php bloginfo('url') ?>/portfolio/">
+      <a href="<?php  echo get_option("Ideas_red_social_facebook"); ?>" target="_blank">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/facebook.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/quote/">
+      <a href="<?php echo get_option("Ideas_red_social_twitter");  ?>" target="_blank" >
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/google-plus.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/contact/">
+      <a href="<?php echo get_option("Ideas_red_social_google_plus"); ?>" target="_blank" >
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/envelope.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/contact/">
+      <a href="skype:<?php echo get_option("Ideas_red_social_skype"); ?>?call">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/skype.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/contact/">
+      <a href="mailto:<?php echo get_option("Ideas_red_social_email"); ?>">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/phone.png">
       </a>
     </div>

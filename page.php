@@ -1,8 +1,6 @@
 <?php get_header() ?>
 
-<div id="space">
-	
-</div>
+<div id="space"></div>
 
 <div id="container" class="cf">
   <?php wp_reset_query() ?>	

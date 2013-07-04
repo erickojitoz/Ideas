@@ -9,7 +9,7 @@ function title_pane(){
 }
 
 function redes_pane(){
-
+     include(get_template_directory().'/lib/social_network_pane.php');
 }
 
 function slide_pane(){

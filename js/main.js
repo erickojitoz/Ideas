@@ -1,5 +1,65 @@
 /* main */
 
+/* flexnav */
+(function($) {
+  $.fn.flexNav = function(options) {
+      var settings = $.extend({
+          'breakpoint': '800',
+          'animationSpeed': 'fast'
+      },
+      options);
+
+      var $this = $(this);
+
+      var resizer = function() {
+          if ($(window).width() < settings.breakpoint) {
+              $("body").removeClass("lg-screen").addClass("sm-screen");
+          }
+          else {
+              $("body").removeClass("sm-screen").addClass("lg-screen");
+          }
+          if ($(window).width() >= settings.breakpoint) {
+              $this.show();
+          }
+      };
+
+      // Call once to set.
+      resizer();
+
+      // Function for testing touch screens
+      function is_touch_device() {
+          return !! ('ontouchstart' in window);
+      }
+
+      // Set class on html element for touch/no-touch
+      if (is_touch_device()) {
+          $('html').addClass('flexNav-touch');
+      } else {
+          $('html').addClass('flexNav-no-touch');
+      }
+
+      // Toggle for nav menu
+      $('.menu-button').click(function() {
+          $this.slideToggle(settings.animationSpeed);
+      });
+  
+      // Closes nav menu after links clicked/touched
+      $this.find('a').click(function() {
+          $this.hide();
+      });
+  
+      // Toggle click for sub-menus on touch and or small screens
+      $('.item-with-ul').click(function() {
+          $(this).find('.sub-menu').slideToggle(settings.animationSpeed);
+      });
+
+      // Call on resize.
+      $(window).on('resize', resizer);
+
+  };
+
+})(jQuery);
+
 /*! http://responsiveslides.com v1.32 by @viljamis */
 (function(d,D,v){d.fn.responsiveSlides=function(h){var b=d.extend({auto:!0,speed:1E3,timeout:4E3,pager:!1,nav:!1,random:!1,pause:!1,pauseControls:!1,prevText:"Previous",nextText:"Next",maxwidth:"",controls:"",namespace:"rslides",before:function(){},after:function(){}},h);return this.each(function(){v++;var e=d(this),n,p,i,k,l,m=0,f=e.children(),w=f.size(),q=parseFloat(b.speed),x=parseFloat(b.timeout),r=parseFloat(b.maxwidth),c=b.namespace,g=c+v,y=c+"_nav "+g+"_nav",s=c+"_here",j=g+"_on",z=g+"_s",
 o=d("<ul class='"+c+"_tabs "+g+"_tabs' />"),A={"float":"left",position:"relative"},E={"float":"none",position:"absolute"},t=function(a){b.before();f.stop().fadeOut(q,function(){d(this).removeClass(j).css(E)}).eq(a).fadeIn(q,function(){d(this).addClass(j).css(A);b.after();m=a})};b.random&&(f.sort(function(){return Math.round(Math.random())-0.5}),e.empty().append(f));f.each(function(a){this.id=z+a});e.addClass(c+" "+g);h&&h.maxwidth&&e.css("max-width",r);f.hide().eq(0).addClass(j).css(A).show();if(1<

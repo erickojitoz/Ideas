@@ -9,10 +9,10 @@
   ?>
   <ul class="rslides">
     <?php foreach ($slideJson as $value) { ?>
-  	<li >
+  	<li>
   	  <img src="<?php echo $value['image'] ?>">
   	  <div class="slide-text">
-  	   <?php echo $value['description'] ?>
+  	    <?php echo $value['description'] ?>
   	  </div>
   	</li>
     <?php } ?>
@@ -21,8 +21,9 @@
 </section>
 
 <section class="phone">
-   <h1><?php echo get_option('ideas_main_title');  ?></h1>
-  <!-- <h1>(956) 203-2021</h1> -->
+  <!-- Home Title -->
+  <h1><?php echo get_option('ideas_main_title'); ?></h1>
+  <!-- Home Subtilte -->
   <p>Call us now and get ready for the success!</p>
 </section>
 

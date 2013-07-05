@@ -1,4 +1,4 @@
-/* 
+/*
 Theme Name: Open Ideas
 Theme URI: erickojitoz.com/ideas/
 Description: Ideas es un tema crado para ser usado por nuestra empresa. Este es editado por nuestro equipo de profesionales y distribuido de manera gratuita para cualquier usuario que desee usarlo. Este es un tema adaptado para ser visible desde cualquier dispositivo. Para la creación de este tema se usaron las tecnologias de HTML5, CSS3 y Javascript. Este tema esta basado en el CMS WordPress, por lo cual utilizamos todas las bondades de PHP para la interacción con las bases de datos.
@@ -12,7 +12,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strike, strong, sub, sup, tt, var, b, i, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, figure, figcaption, footer, header, hgroup,
 menu, nav, output, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@ menu, nav, output, section, summary, time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -40,6 +40,9 @@ blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
+}
+article > footer{
+  background-color: transparent;
 }
 table {
   border-collapse: collapse;
@@ -86,6 +89,10 @@ img{
   height: auto;
   vertical-align: middle;
   width: 100%;
+}
+
+.avatar {
+  width: auto;
 }
 p{
   font-size: 1em;
@@ -146,24 +153,37 @@ small{
 footer{
   background: #000;
   width: 100%;
+  display: inline-block;
 }
 .fmenu{
   display: none;
 }
 .eologo{
   float: none;
-  margin: 3% auto; 
+  margin: 3% auto;
   width: 70%;
 }
 
 /* form */
 form{
-  border-right: 1px solid #ddd; 
+  border-right: 1px solid #ddd;
   float: left;
   margin: 1% 0;
   padding: 2%;
   width: 50%;
 }
+
+form#searchform{
+  float: right;
+  display: inline-block;
+  margin: 0;
+  margin-top: 50px;
+  margin-right: 50px;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
 form p{
   padding: 0;
 }
@@ -192,7 +212,7 @@ label{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=1 );
   border: 1px solid #ddd;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   margin: 1% 0 1% 28%;
   padding: 3%;
   transition: all 0.3s ease-in-out;
@@ -261,7 +281,7 @@ header{
   border-radius: 50%;
   float: left;
   height: auto;
-  margin-left: 3%; 
+  margin-left: 3%;
   position: relative;
   transition: all 0.2s ease-in-out;
   width: 15%;
@@ -286,7 +306,7 @@ header{
 }
 .featured{
   display: inline-block;
-  margin: 1% auto; 
+  margin: 1% auto;
 }
 .free-button{
   margin: 2% auto;
@@ -406,7 +426,7 @@ ul:after {
 .current-menu-item{
   background-color: #000;
 }
-.flexNav-touch [role='navigation'], .flexNav-no-touch [role='navigation'] { 
+.flexNav-touch [role='navigation'], .flexNav-no-touch [role='navigation'] {
   display: none;
 }
 .menu-button {
@@ -444,13 +464,13 @@ ul:after {
   transform: scale(1);
   transition: all 0.4s ease-in-out;
 }
-.post:hover img { 
+.post:hover img {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 .post .post-title{
   -webkit-transition: all 0.2s linear;
-  background-color: rgba(0, 0, 0, 0.9); 
+  background-color: rgba(0, 0, 0, 0.9);
   transition: all 0.2s linear;
   opacity: 0;
   height: 100%;
@@ -460,7 +480,7 @@ ul:after {
   vertical-align: middle;
   width: 100%;
   overflow: hidden;
-  left: 0 
+  left: 0
 }
 .post:hover .post-title{
   opacity: 1;
@@ -559,7 +579,7 @@ ul:after {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=1 );
   border: 1px solid #ddd;
   cursor: pointer;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   margin: 4% auto;
   opacity: 1;
   padding: 3%;
@@ -637,7 +657,7 @@ ul:after {
 
 @media screen and (min-width: 480px){
   .eologo{
-    margin: 4% auto; 
+    margin: 4% auto;
     width: 40%;
   }
   .span2, .span3, .span4, .span6, .span8, .span9, .span10, .span12{
@@ -744,7 +764,7 @@ ul:after {
   }
   .eologo{
     float: left;
-    margin: 1%; 
+    margin: 1%;
     width: 30%;
   }
   .free-button{
@@ -804,7 +824,7 @@ ul:after {
     width: 16%;
   }
   .span2{
-    width: 15.4166666667%; 
+    width: 15.4166666667%;
   }
   .span3{
     width: 24%;

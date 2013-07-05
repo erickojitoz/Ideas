@@ -1,3 +1,14 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the id=main div and all content after
+ *
+ * @package Open Dev
+ * @subpackage Ideas
+ * @since Ideas 1.0
+ */
+?>
 <footer class="cf">
   <div class="eologo">
 	<a href="http://erickojitoz.com/">
@@ -25,7 +36,7 @@
 
 <?php wp_footer() ?>
 
-<?php if(get_option('ideas_analitycs') && strlen(get_option('ideas_analitycs') > 0)){ ?>
+<?php if(get_option('ideas_analitycs') && strlen(get_option('ideas_analitycs') > 0)): ?>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script type="text/javascript">
 
@@ -39,7 +50,7 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
     </script>
-<?php } ?>
+<?php endif; ?>
 </footer>
 </body>
 </html>

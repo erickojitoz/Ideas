@@ -22,8 +22,7 @@
 
 <section class="phone">
    <h1><?php echo get_option('ideas_main_title');  ?></h1>
-  <!-- <h1>(956) 203-2021</h1> -->
-  <p>Call us now and get ready for the success!</p>
+  <p><?php echo get_option('ideas_main_subtitle'); ?></p>
 </section>
 
 <div class="services cf">

@@ -35,6 +35,9 @@ function upload_admin_scripts()
 	wp_enqueue_script('thickbox');
 	wp_register_script('my-upload', get_template_directory_uri().'/js/upload-admin.js', array('jquery','media-upload','thickbox'));
 	wp_enqueue_script('my-upload');
+	wp_register_script('my-upload2', get_template_directory_uri().'/js/events.js');
+	wp_enqueue_script('my-upload2');
+
 }
 
 function upload_admin_styles()

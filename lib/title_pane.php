@@ -30,14 +30,17 @@
 			<label>
           		Main Title
         	</label>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="text" name="main_title_field" id="main_title_field" value="<?php echo $main_title_field; ?>" size="50">
 		</div>
 		<div>
 			<label>
-               Main Sub Title
+               Main Subtitle
 			</label>
             <input type="text" name="main_subtitle_field" id="main_subtitle_field" value="<?php echo $main_subtitle_field; ?>" size="50" />
-        </div>	
-       <input type="submit" value="Submit">
+        </div>
+		<div>
+			<input type="submit" value="Submit">
+		</div>
 	</form>
 </div>

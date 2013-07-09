@@ -1,4 +1,4 @@
-<!doctype html>  
+<!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
@@ -35,7 +35,7 @@
   <?php wp_head() ?>
 </head>
 
-<body>
+<body class='custom-background'>
 <!--[if lt IE 8]>
   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -48,27 +48,27 @@
   </section>
   <section id="top-icons">
     <div>
-      <a href="<?php bloginfo('url') ?>/portfolio/">
+      <a href="<?php  echo get_option("Ideas_red_social_facebook"); ?>" target="_blank">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/facebook.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/quote/">
+      <a href="<?php echo get_option("Ideas_red_social_twitter");  ?>" target="_blank" >
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/google-plus.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/contact/">
+      <a href="<?php echo get_option("Ideas_red_social_google_plus"); ?>" target="_blank" >
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/envelope.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/contact/">
+      <a href="skype:<?php echo get_option("Ideas_red_social_skype"); ?>?call">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/skype.png">
       </a>
     </div>
     <div>
-      <a href="<?php bloginfo('url') ?>/contact/">
+      <a href="mailto:<?php echo get_option("Ideas_red_social_email"); ?>">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/phone.png">
       </a>
     </div>
@@ -79,11 +79,11 @@
   <div class="menu-button">Menu</div>
   <?php wp_nav_menu(array(
     'theme_location'  => 'hmenu',
-    'menu'            => 'hmenu', 
-    'container'       => 'nav', 
-    'container_class' => 'menu', 
+    'menu'            => 'hmenu',
+    'container'       => 'nav',
+    'container_class' => 'menu',
     'container_id'    => '',
-    'menu_class'      => 'menu', 
+    'menu_class'      => 'menu',
     'menu_id'         => 'menu',
     'echo'            => true,
     'fallback_cb'     => 'wp_page_menu',
@@ -95,8 +95,8 @@
     'depth'           => 0,
     'walker'          => ''
   )) ?>
-  <script> 
-    $("[role='navigation']").flexNav(); 
+  <script>
+    $("[role='navigation']").flexNav();
   </script>
 </section>
 

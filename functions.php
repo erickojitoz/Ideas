@@ -37,8 +37,8 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 /* images */
-add_image_size( 
-	'post-img', 300, 220, true 
+add_image_size(
+	'post-img', 300, 220, true
 );
 
 /* menus */
@@ -49,8 +49,8 @@ register_nav_menus(array(
 ));
 
 /* posts */
-add_theme_support( 
+add_theme_support(
 	'post-thumbnails'
 );
 
-?>
+require( get_template_directory().'/lib/ideas.php' );

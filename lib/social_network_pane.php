@@ -2,7 +2,7 @@
 
 function update_links($links,$network,$mode){
 
-  if("insert"){
+  if($mode == "insert"){
 	if($network == "skype"){
 		$links = "skype:".$links."?call";
 	}
@@ -10,7 +10,9 @@ function update_links($links,$network,$mode){
 		$links = "mailto:".$links;
 	}
   }
-  else if("retrieve"){
+  else if($mode == "retrieve"){
+  
+
 	if($network == "skype"){
 	   $links = str_replace("skype:","",$links);
 	   $links = str_replace("?call","",$links);
@@ -22,6 +24,22 @@ function update_links($links,$network,$mode){
 	return $links;
 }
 
+function generateNetworkSelector($network){
+
+	$Ideas_select_field_array = array("","facebook","twitter","soundcloud","googleplus","skype","linkedin","ownEmail","youtube","pinterest","instagram","github");
+	$Ideas_select_field_show_array = array("","Facebook","Twitter","Sound Cloud","Google Plus","Skype","Linkedin","Email","Youtube","Pinterest","Instagram","Github");
+	$ideas_show = "";
+	for( $i = 0; $i < count($Ideas_select_field_array); $i++ ){
+			
+			if( $Ideas_select_field_array[$i] == $network ){
+				$ideas_show .= "<option value='$Ideas_select_field_array[$i]' selected>$Ideas_select_field_show_array[$i]</option>";
+			}
+			else{
+				$ideas_show .= "<option value='$Ideas_select_field_array[$i]'>$Ideas_select_field_show_array[$i]</option>";
+			}
+	}
+	return $ideas_show;
+}
 
 
   // first social network
@@ -118,18 +136,7 @@ function update_links($links,$network,$mode){
 			<label>Social Network #1</label>
 			&nbsp; <input type="text" name="Ideas_social_network_one" id="Ideas_social_network_one" size="50" value="<?php echo $Ideas_social_network_one; ?>" />
 			&nbsp; <select name="Ideas_social_network_one_choose" id="Ideas_social_network_one_choose" >
-						<option value=""></option>
-						<option value="facebook">Facebook</option>
-						<option value="twitter">Twitter</option>
-						<option value="soundcloud">SoundCloud</option>
-						<option value="googleplus">Google Plus</option>
-						<option value="skype">Skype</option>
-						<option value="linkedin">Linkedin</option>
-						<option value="ownEmail">Email</option>
-						<option value="youtube">Youtube</option>
-						<option value="pinterest">Pinterest</option>
-						<option value="instagram">Instagram</option>
-						<option value="github">Github</option>
+						<?php echo generateNetworkSelector($Ideas_social_network_one_choose);  ?>
 				   </select>
 		</div>
 		
@@ -137,18 +144,7 @@ function update_links($links,$network,$mode){
 			<label>Social Network #2</label>
 			&nbsp; <input type="text" name="Ideas_social_network_two" id="Ideas_social_network_two" size="50" value="<?php echo $Ideas_social_network_two; ?>" />
 			&nbsp; <select name="Ideas_social_network_two_choose" id="Ideas_social_network_two_choose" >
-						<option value=""></option>
-						<option value="facebook">Facebook</option>
-						<option value="twitter">Twitter</option>
-						<option value="soundcloud">SoundCloud</option>
-						<option value="googleplus">Google Plus</option>
-						<option value="skype">Skype</option>
-						<option value="linkedin">Linkedin</option>
-						<option value="ownEmail">Email</option>
-						<option value="youtube">Youtube</option>
-						<option value="pinterest">Pinterest</option>
-						<option value="instagram">Instagram</option>
-						<option value="github">Github</option>
+						<?php echo generateNetworkSelector($Ideas_social_network_two_choose);  ?>
 				   </select>
 		</div>
 		
@@ -156,18 +152,7 @@ function update_links($links,$network,$mode){
 			<label>Social Network #3</label>
 			&nbsp; <input type="text" name="Ideas_social_network_three" id="Ideas_social_network_three" size="50" value="<?php echo $Ideas_social_network_three; ?>" />
 			&nbsp; <select name="Ideas_social_network_three_choose" id="Ideas_social_network_three_choose" >
-						<option value=""></option>
-						<option value="facebook">Facebook</option>
-						<option value="twitter">Twitter</option>
-						<option value="soundcloud">SoundCloud</option>
-						<option value="googleplus">Google Plus</option>
-						<option value="skype">Skype</option>
-						<option value="linkedin">Linkedin</option>
-						<option value="ownEmail">Email</option>
-						<option value="youtube">Youtube</option>
-						<option value="pinterest">Pinterest</option>
-						<option value="instagram">Instagram</option>
-						<option value="github">Github</option>
+						<?php echo generateNetworkSelector($Ideas_social_network_three_choose);  ?>
 				   </select>
 		</div>
 		
@@ -175,18 +160,7 @@ function update_links($links,$network,$mode){
 			<label>Social Network #4</label>
 			&nbsp; <input type="text" name="Ideas_social_network_four" id="Ideas_social_network_four" size="50" value="<?php echo $Ideas_social_network_four; ?>" />
 			&nbsp; <select name="Ideas_social_network_four_choose" id="Ideas_social_network_four_choose" >
-						<option value=""></option>
-						<option value="facebook">Facebook</option>
-						<option value="twitter">Twitter</option>
-						<option value="soundcloud">SoundCloud</option>
-						<option value="googleplus">Google Plus</option>
-						<option value="skype">Skype</option>
-						<option value="linkedin">Linkedin</option>
-						<option value="ownEmail">Email</option>
-						<option value="youtube">Youtube</option>
-						<option value="pinterest">Pinterest</option>
-						<option value="instagram">Instagram</option>
-						<option value="github">Github</option>
+						<?php echo generateNetworkSelector($Ideas_social_network_four_choose);  ?>
 				   </select>
 		</div>
 		
@@ -194,22 +168,12 @@ function update_links($links,$network,$mode){
 			<label>Social Network #5</label>
 			&nbsp; <input type="text" name="Ideas_social_network_five" id="Ideas_social_network_five" size="50" value="<?php echo $Ideas_social_network_five; ?>" />
 			&nbsp; <select name="Ideas_social_network_five_choose" id="Ideas_social_network_five_choose" >
-						<option value=""></option>
-						<option value="facebook">Facebook</option>
-						<option value="twitter">Twitter</option>
-						<option value="soundcloud">SoundCloud</option>
-						<option value="googleplus">Google Plus</option>
-						<option value="skype">Skype</option>
-						<option value="linkedin">Linkedin</option>
-						<option value="ownEmail">Email</option>
-						<option value="youtube">Youtube</option>
-						<option value="pinterest">Pinterest</option>
-						<option value="instagram">Instagram</option>
-						<option value="github">Github</option>
+						<?php echo generateNetworkSelector($Ideas_social_network_five_choose);  ?>
 				   </select>
 		</div>
 		
 		
 		<input type="button" value="Submit" name="submit" id="submit_social_networks" />
+		<input type="submit" value="" id="submit_button_hidden" name="submit_button_hidden" style="display:none;" >
 	</form>
 </div>

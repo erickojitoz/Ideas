@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
 
 function social_networks_events(){
 	jQuery('#submit_social_networks').on('click',function(){
+			
 		var netone = jQuery("#Ideas_social_network_one_choose").prop("selectedIndex");
 		var nettwo = jQuery("#Ideas_social_network_two_choose").prop("selectedIndex");
 		var netthree = jQuery("#Ideas_social_network_three_choose").prop("selectedIndex");
@@ -15,7 +16,7 @@ function social_networks_events(){
 		var linkthree = jQuery("#Ideas_social_network_three").val();
 		var linkfour = jQuery("#Ideas_social_network_four").val();
 		var linkfive = jQuery("#Ideas_social_network_five").val();
-		var links = new Array(linkone,linkone,linkthree,linkfour,linkfive);
+		var links = new Array(linkone,linktwo,linkthree,linkfour,linkfive);
 		
 		var validate = new Array('','','','','','','','','','','','');
 		var error_show = "";
@@ -46,7 +47,7 @@ function social_networks_events(){
 		"Github link doesn't match "
 		);
 		
-		var skype_regexp = /[a-zA-Z][a-zA-Z0-9\.,\-_]{5,31}/; 
+		var skype_regexp = /^[a-zA-Z][a-zA-Z0-9_\-\,\.]{5,31}/;
 		var email_regexp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		
 		validate[0] = "";
@@ -131,7 +132,7 @@ function social_networks_events(){
 			alert(error_show);
 		}
 		else{
-			jQuery("#Ideas_social_network_form").submit;
+			jQuery("#submit_button_hidden").trigger('click');
 		}
 	});
 }

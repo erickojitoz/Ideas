@@ -53,7 +53,6 @@
   else{
 	add_option( 'Ideas_red_social_email', '', '', 'yes' );
   }
-  
 ?>
 <div class="wrap srp">
 	<h2>Ideas Social Networks</h2>

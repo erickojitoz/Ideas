@@ -1,3 +1,14 @@
+<?php
+/**
+ * The Header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package Open Dev
+ * @subpackage Ideas
+ * @since Ideas 1.0
+ */
+?>
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -73,6 +84,9 @@
       </a>
     </div>
   </section>
+    <?php if(get_option('ideas_searchform') == 'on'): ?>
+    <?php get_search_form(); ?>
+    <?php endif; ?>
 </header>
 
 <section class="cf">

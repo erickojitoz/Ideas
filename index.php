@@ -31,19 +31,19 @@
   	<div class="service-icon">
     <a href="<?php bloginfo('url') ?>/services/web-design/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/earth.png" alt=""></a>
     </div>
-    <p>Web Design</p>
+    <p><?php echo get_option('Ideas_featured_post_one');  ?></p>
   </section>
   <section class="span4 serv">
   	<div class="service-icon">
     <a href="<?php bloginfo('url') ?>/services/graphic-design/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/images.png" alt=""></a>
     </div>
-    <p>Graphic Deisgn</p>
+    <p><?php echo get_option('Ideas_featured_post_two');  ?></p>
   </section>
   <section class="span4 serv">
   	<div class="service-icon">
     <a href="<?php bloginfo('url') ?>/services/publicity/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/user.png" alt=""></a>
     </div>
-    <p>Publicity</p>
+    <p><?php echo get_option('Ideas_featured_post_three');  ?></p>
   </section>
 </div>
 

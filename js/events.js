@@ -1,5 +1,6 @@
 jQuery(document).ready(function(){
   social_networks_events();
+  featured_post();
 });
 
 function social_networks_events(){
@@ -133,6 +134,31 @@ function social_networks_events(){
 		}
 		else{
 			jQuery("#submit_button_hidden").trigger('click');
+		}
+	});
+}
+
+function featured_post(){
+	jQuery("#Ideas_button_featured_post").on('click',function(){
+		var error_showed = "";
+		
+		if(jQuery("#Ideas_featured_post_one").val() == "" ){
+			error_showed += "Featured Post one cannot be blank \n";
+		}
+		
+		if(jQuery("#Ideas_featured_post_two").val() == "" ){
+			error_showed += "Featured Post two cannot be blank \n";
+		}
+		
+		if(jQuery("#Ideas_featured_post_three").val() == ""){
+			error_showed += "Featured Post three cannot be blank \n";
+		}
+		
+		if( error_showed.length == 0 ){
+			jQuery("#Ideas_submit_featured_post").trigger('click');
+		}
+		else{
+			alert(error_showed);
 		}
 	});
 }

@@ -16,6 +16,14 @@ function slide_pane(){
 	include(get_template_directory().'/lib/slide_pane.php');
 }
 
+function main_logo_pane(){
+	include(get_template_directory().'/lib/main_logo_pane.php');
+}
+
+function featured_post_pane(){
+	include(get_template_directory().'/lib/featured_post_pane.php');
+}
+
 
 function Ideas_add_menu(){
 	if (function_exists('add_menu_page')) {
@@ -24,7 +32,8 @@ function Ideas_add_menu(){
 		add_submenu_page('ideas/ideas.php', "Ideas", "Slide", 3, 'Slide_panel', 'slide_pane');
 		add_submenu_page('ideas/ideas.php', "Ideas", 'Redes Sociales', 3, 'Redes_panel', 'redes_pane');
 		add_submenu_page('ideas/ideas.php', "Ideas", 'Title', 3, 'Title_panel', 'title_pane');
-
+		add_submenu_page('ideas/ideas.php', "Ideas", 'Main Logo', 3, 'main_logo_panel', 'main_logo_pane');
+		add_submenu_page('ideas/ideas.php', "Ideas", 'Featured Post', 3, 'featured_post_panel', 'featured_post_pane');
 	}
 }
 

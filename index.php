@@ -29,19 +29,25 @@
   <h1>We are specialized in:</h1>
   <section class="span4 serv">
   	<div class="service-icon">
-    <a href="<?php bloginfo('url') ?>/services/web-design/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/earth.png" alt=""></a>
+    <a href="<?php echo get_option('Ideas_featured_link_one'); ?>">
+		<img src="<?php echo get_option('Ideas_featured_image_one'); ?>" alt="">
+	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_one');  ?></p>
   </section>
   <section class="span4 serv">
   	<div class="service-icon">
-    <a href="<?php bloginfo('url') ?>/services/graphic-design/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/images.png" alt=""></a>
+    <a href="<?php echo get_option('Ideas_featured_link_two'); ?>">
+		<img src="<?php echo get_option('Ideas_featured_image_two'); ?>" alt="">
+	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_two');  ?></p>
   </section>
   <section class="span4 serv">
   	<div class="service-icon">
-    <a href="<?php bloginfo('url') ?>/services/publicity/"><img src="<?php bloginfo( 'template_directory' ) ?>/img/user.png" alt=""></a>
+    <a href="<?php echo get_option('Ideas_featured_link_three'); ?>">
+		<img src="<?php echo get_option('Ideas_featured_image_three'); ?>" alt="">
+	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_three');  ?></p>
   </section>

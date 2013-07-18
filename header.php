@@ -55,7 +55,7 @@
 <header class="cf">
   <section id="logo">
     <a href="<?php bloginfo('url') ?>">
-      <img src="<?php bloginfo('template_directory') ?>/img/logo.png">
+      <img src="<?php echo get_option('Ideas_main_logo'); ?>">
     </a>
   </section>
   <section id="top-icons">

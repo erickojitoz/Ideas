@@ -10,8 +10,8 @@
  */
 ?>
 <footer class="cf">
-  <div class="eologo">
-	<a href="http://erickojitoz.com/">
+  <div class="sign">
+	<a href="http://opendevteam.com/">
 	  <img src="<?php bloginfo( 'template_directory' ) ?>/img/sign.png">
 	</a>
   </div>

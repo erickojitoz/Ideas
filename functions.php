@@ -21,8 +21,7 @@ add_filter('user_contactmethods','new_contactmethods',10,1);
 
 /* background */
 $args = array(
-	'default-color' => '000000',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg',
+	'default-color' => 'f2f3f4',
 );
 add_theme_support( 'custom-background', $args);
 

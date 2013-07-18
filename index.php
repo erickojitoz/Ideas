@@ -34,65 +34,38 @@ get_header() ?>
   <?php } ?>
 </section>
 
-<section class="phone">
+<section class="home-title">
   <!-- Home Title -->
   <h1><?php echo get_option('ideas_main_title'); ?></h1>
-  <p><?php echo get_option('ideas_main_subtitle'); ?></p>
   <!-- Home Subtilte -->
+  <p><?php echo get_option('ideas_main_subtitle'); ?></p>
 </section>
 
-<div class="services cf">
-  <h1>We are specialized in:</h1>
-  <section class="span4 serv">
-  	<div class="service-icon">
+<div class="post-featured cf">
+  <section class="span4 ft">
+  	<div class="featured-image">
     <a href="<?php echo get_option('Ideas_featured_link_one'); ?>">
 		<img src="<?php echo get_option('Ideas_featured_image_one'); ?>" alt="">
 	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_one');  ?></p>
   </section>
-  <section class="span4 serv">
-  	<div class="service-icon">
+  <section class="span4 ft">
+  	<div class="featured-image">
     <a href="<?php echo get_option('Ideas_featured_link_two'); ?>">
 		<img src="<?php echo get_option('Ideas_featured_image_two'); ?>" alt="">
 	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_two');  ?></p>
   </section>
-  <section class="span4 serv">
-  	<div class="service-icon">
+  <section class="span4 ft">
+  	<div class="featured-image">
     <a href="<?php echo get_option('Ideas_featured_link_three'); ?>">
 		<img src="<?php echo get_option('Ideas_featured_image_three'); ?>" alt="">
 	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_three');  ?></p>
   </section>
-</div>
-
-<section class="featured">
-  <h1>Why Us?</h1>
-  <h4>There are so many designers around Texas, but we have many things that they don't.</h4>
-  <div class="home-image"><img src="<?php bloginfo('template_directory') ?>/img/web.png"></div>
-  <div class="home-text border-left">
-  	<h2>We use the latest technology</h2>
-  	<p>Although we are a small company, we always focus on learning the latest techniques and know inoveras technologies that are changing the course of design and advertising. We offer more innovative ideas for your project and help you achieve the success you seek.</p>
-  </div>
-</section>
-
-<section class="featured">
-  <h1>Our pricing!</h1>
-  <div class="home-text border-right">
-  	<h2>The lowest prices in Texas</h2>
-  	<p>We are a company that knows the current economic situation, for that reason we offer the best prices. With us you always get more, so who charge the same as us, they always give you less. No one can compete with our prices.</p>
-  </div>
-  <div class="home-image"><img src="<?php bloginfo('template_directory') ?>/img/happy.png"></div>
-</section>
-
-<section class="featured">
-  <h1>Get Started now</h1>
-  <h4>Contact us for a free stimation of your project. Discover all that you can get and become part of our happy costumers!</h4>
-  <section class="free-button"><a href="<?php bloginfo('url') ?>/contact/"><p class="slide-button">Free Estimate</p></a></section>
-</section>
 </div>
 
 <?php get_footer() ?>

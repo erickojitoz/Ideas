@@ -2,7 +2,7 @@
 /* admin footer */
 function remove_footer_admin ()
 {
-	echo '<span id="footer-thankyou">Designed by <a href="http://erickojitoz.com" target="_blank">Erick Ojitoz</a>  |  Follow me on Twitter: <a href="http://www.twitter.com/erickojitoz" target="_blank">@erickojitoz</a></span>';
+	echo '<span id="footer-thankyou">Designed by <a href="http://opendevteam.com" target="_blank">Open Dev Team</a>  |  Contact us at: <a href="mailto:opendevinfo@gmail.com" target="_blank">opendevinfo@gmail.com</a></span>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 

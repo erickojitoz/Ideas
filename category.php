@@ -1,3 +1,12 @@
+<?php
+/**
+ * The template for displaying Category Archive pages.
+ *
+ * @package Open Dev
+ * @subpackage Ideas
+ * @since Ideas 1.0
+ */
+?>
 <?php get_header() ?>
 
 <section id="cat-header">

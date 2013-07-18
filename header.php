@@ -1,3 +1,14 @@
+<?php
+/**
+ * The Header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="main">
+ *
+ * @package Open Dev
+ * @subpackage Ideas
+ * @since Ideas 1.0
+ */
+?>
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
@@ -14,6 +25,7 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="<?php bloginfo('template_directory') ?>/js/main.js"></script>
+  <script src="<?php bloginfo('template_directory') ?>/js/events.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -43,36 +55,39 @@
 <header class="cf">
   <section id="logo">
     <a href="<?php bloginfo('url') ?>">
-      <img src="<?php bloginfo('template_directory') ?>/img/logo.png">
+      <img src="<?php echo get_option('Ideas_main_logo'); ?>">
     </a>
   </section>
   <section id="top-icons">
     <div>
-      <a href="<?php  echo get_option("Ideas_red_social_facebook"); ?>" target="_blank">
-        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/facebook.png">
+      <a href="<?php  echo get_option("Ideas_social_network_one"); ?>" target="_blank">
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_one_choose"); ?>.png">
       </a>
     </div>
     <div>
-      <a href="<?php echo get_option("Ideas_red_social_twitter");  ?>" target="_blank" >
-        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/google-plus.png">
+      <a href="<?php echo get_option("Ideas_social_network_two");  ?>" target="_blank" >
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_two_choose"); ?>.png">
       </a>
     </div>
     <div>
-      <a href="<?php echo get_option("Ideas_red_social_google_plus"); ?>" target="_blank" >
-        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/envelope.png">
+      <a href="<?php echo get_option("Ideas_social_network_three"); ?>" target="_blank" >
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_three_choose");  ?>.png">
       </a>
     </div>
     <div>
-      <a href="skype:<?php echo get_option("Ideas_red_social_skype"); ?>?call">
-        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/skype.png">
+      <a href="<?php echo get_option("Ideas_social_network_four"); ?>">
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_four_choose"); ?>.png">
       </a>
     </div>
     <div>
-      <a href="mailto:<?php echo get_option("Ideas_red_social_email"); ?>">
-        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/phone.png">
+      <a href="<?php echo get_option("Ideas_social_network_five"); ?>">
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five"); ?>.png">
       </a>
     </div>
   </section>
+    <?php if(get_option('ideas_searchform') == 'on'): ?>
+    <?php get_search_form(); ?>
+    <?php endif; ?>
 </header>
 
 <section class="cf">

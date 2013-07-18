@@ -35,15 +35,10 @@ get_header() ?>
 </section>
 
 <section class="phone">
-<<<<<<< HEAD
   <!-- Home Title -->
   <h1><?php echo get_option('ideas_main_title'); ?></h1>
-  <!-- Home Subtilte -->
-  <p>Call us now and get ready for the success!</p>
-=======
-   <h1><?php echo get_option('ideas_main_title');  ?></h1>
   <p><?php echo get_option('ideas_main_subtitle'); ?></p>
->>>>>>> origin/victor_jobs
+  <!-- Home Subtilte -->
 </section>
 
 <div class="services cf">

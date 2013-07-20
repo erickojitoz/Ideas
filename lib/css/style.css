@@ -1,0 +1,24 @@
+.menu_ideas, .menu_ideas ul, .menu_ideas ul li, .menu_ideas ul li a{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.menu_ideas{
+	width: 100%;
+	border-bottom: 1px solid olive;
+}
+
+.menu_ideas ul li{
+	margin-right: 20px;
+}
+
+.menu_ideas ul li a{
+	text-decoration: none;
+	border: 1px solid olive;
+	border-bottom: none;
+	padding: 20px;
+	padding-bottom: 19px;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}

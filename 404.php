@@ -5,8 +5,8 @@
 <div id="container" class="cf">
   <section id="error">
   	<h1>Oops! Who broke this?</h1>
-  	<p>PAge not found! Sorry, but the page you are looking for doesn't exist or this link is broke. Please try searching again or let us know... Our cat will fix this next year.</p>
+  	<p>Page not found! Sorry, but the page you are looking for doesn't exist or this link is broke. Please try searching again or let us know... Our cat will fix this next year.</p>
   </section>
-</div>	
+</div>
 
 <?php get_footer() ?>

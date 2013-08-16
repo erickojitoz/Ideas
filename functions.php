@@ -41,13 +41,15 @@ $args = array(
 
 	// Random image rotation off by default.
 	'random-default'         => false,
-	'default-image' => get_template_directory_uri() . '/img/sign.png',
 );
 add_theme_support( 'custom-header', $args );
 
 /* images */
 add_image_size(
 	'post-img', 300, 220, true
+);
+add_image_size(
+	'featured-img', 220, 220, true
 );
 
 /* menus */

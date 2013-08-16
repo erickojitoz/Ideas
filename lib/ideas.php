@@ -10,7 +10,7 @@ function Ideas_configuracion(){
 
 function Ideas_add_menu(){
 	if (function_exists('add_menu_page')) {
-		add_theme_page("Ideas Options", "Ideas Options", 'edit_themes', basename(__FILE__), 'Ideas_configuracion');
+		add_theme_page("Theme Options", "Theme Options", 'edit_themes', basename(__FILE__), 'Ideas_configuracion');
 	}
 }
 

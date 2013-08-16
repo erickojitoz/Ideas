@@ -1,4 +1,4 @@
-<h2>Ideas' Template Configuration</h2>
+<h1>Open Dev's Theme Configuration</h1>
 <div class="menu_ideas">
 	<ul>
 		<li><a href="#titles">Titles</a></li>

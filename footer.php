@@ -10,11 +10,6 @@
  */
 ?>
 <footer class="cf">
-  <div class="sign">
-	<a href="http://opendevteam.com/">
-	  <img src="<?php bloginfo( 'template_directory' ) ?>/img/sign.png">
-	</a>
-  </div>
   <?php wp_nav_menu(array(
     'theme_location'  => 'hmenu',
     'menu'            => 'hmenu',
@@ -34,7 +29,11 @@
     'walker'          => ''
   )) ?>
 
-<?php wp_footer() ?>
+  <div class="sign">
+    <a href="http://opendevteam.com/">
+      <img src="<?php bloginfo( 'template_directory' ) ?>/img/sign.png">
+    </a>
+  </div>
 
 <?php if(get_option('ideas_analitycs') && strlen(get_option('ideas_analitycs') > 0)): ?>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -52,5 +51,7 @@
     </script>
 <?php endif; ?>
 </footer>
+
+<?php wp_footer() ?>
 </body>
 </html>

@@ -44,58 +44,35 @@
 <header class="cf">
   <section id="logo">
     <a href="<?php bloginfo('url') ?>">
-        <div id="headimg">
-        <?php
-        if ( ! display_header_text() )
-          $style = ' style="display:none;"';
-        else
-          $style = ' style="color:#' . get_header_textcolor() . ';"';
-        ?>
-        <h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-        <h2 id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></h2>
-        <?php $header_image = get_header_image();
-        if ( ! empty( $header_image ) ) : ?>
-          <img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-        <?php endif; ?>
-      </div>
+      <img src="<?php echo get_option('Ideas_main_logo'); ?>">
     </a>
   </section>
   <section id="top-icons">
-    <?php if( strlen( get_option("Ideas_social_network_one")) > 0){ ?>
     <div>
       <a href="<?php  echo get_option("Ideas_social_network_one"); ?>" target="_blank">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_one_choose"); ?>.png">
       </a>
     </div>
-    <?php } ?>
-    <?php if( strlen( get_option("Ideas_social_network_two")) > 0){ ?>
     <div>
       <a href="<?php echo get_option("Ideas_social_network_two");  ?>" target="_blank" >
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_two_choose"); ?>.png">
       </a>
     </div>
-    <?php } ?>
-    <?php if( strlen( get_option("Ideas_social_network_three")) > 0){ ?>
     <div>
       <a href="<?php echo get_option("Ideas_social_network_three"); ?>" target="_blank" >
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_three_choose");  ?>.png">
       </a>
     </div>
-    <?php } ?>
-    <?php if( strlen( get_option("Ideas_social_network_four")) > 0){ ?>
     <div>
       <a href="<?php echo get_option("Ideas_social_network_four"); ?>">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_four_choose"); ?>.png">
       </a>
     </div>
-    <?php } ?>
-    <?php if( strlen( get_option("Ideas_social_network_five")) > 0){ ?>
     <div>
       <a href="<?php echo get_option("Ideas_social_network_five"); ?>">
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five"); ?>.png">
       </a>
     </div>
-    <?php } ?>
   </section>
     <?php if(get_option('ideas_searchform') == 'on'): ?>
     <?php get_search_form(); ?>

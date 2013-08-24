@@ -1,18 +1,32 @@
-<?php  get_header() ?>
+<?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Open Dev
+ * @subpackage Ideas
+ * @since Ideas 1.0
+ */
+get_header() ?>
 
 <div class="cf">
 <section id="slide" >
   <?php
-  $url = get_template_directory().'/lib/slide.json';
-  if(file_exists($url)){
-    $slideJson = json_decode(file_get_contents($url),true);
+
+  if(get_option('ideas_slide')){
+    $slideJson = json_decode(get_option('ideas_slide'),true);
   ?>
   <ul class="rslides">
     <?php foreach ($slideJson as $value) { ?>
-  	<li >
+  	<li>
   	  <img src="<?php echo $value['image'] ?>">
   	  <div class="slide-text">
-  	   <?php echo $value['description'] ?>
+  	    <?php echo $value['description'] ?>
   	  </div>
   	</li>
     <?php } ?>
@@ -20,63 +34,70 @@
   <?php } ?>
 </section>
 
-<section class="phone">
-   <h1><?php echo get_option('ideas_main_title');  ?></h1>
+<section class="home-title">
+  <!-- Home Title -->
+  <h1><?php echo get_option('ideas_main_title'); ?></h1>
+  <!-- Home Subtilte -->
   <p><?php echo get_option('ideas_main_subtitle'); ?></p>
 </section>
 
-<div class="services cf">
-  <h1>We are specialized in:</h1>
-  <section class="span4 serv">
-  	<div class="service-icon">
-    <a href="<?php echo get_option('Ideas_featured_link_one'); ?>">
-		<img src="<?php echo get_option('Ideas_featured_image_one'); ?>" alt="">
-	</a>
+<div class="post-featured cf">
+  <h2>Featured Stories</h2>
+  <section class="span4 ft">
+  	<div class="featured-image">
+      <a href="<?php echo get_option('Ideas_featured_link_one'); ?>">
+    		<img src="<?php echo get_option('Ideas_featured_image_one'); ?>" alt="">
+    	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_one');  ?></p>
   </section>
-  <section class="span4 serv">
-  	<div class="service-icon">
-    <a href="<?php echo get_option('Ideas_featured_link_two'); ?>">
-		<img src="<?php echo get_option('Ideas_featured_image_two'); ?>" alt="">
-	</a>
+  <section class="span4 ft">
+  	<div class="featured-image">
+      <a href="<?php echo get_option('Ideas_featured_link_two'); ?>">
+    		<img src="<?php echo get_option('Ideas_featured_image_two'); ?>" alt="">
+    	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_two');  ?></p>
   </section>
-  <section class="span4 serv">
-  	<div class="service-icon">
-    <a href="<?php echo get_option('Ideas_featured_link_three'); ?>">
-		<img src="<?php echo get_option('Ideas_featured_image_three'); ?>" alt="">
-	</a>
+  <section class="span4 ft">
+  	<div class="featured-image">
+      <a href="<?php echo get_option('Ideas_featured_link_three'); ?>">
+    		<img src="<?php echo get_option('Ideas_featured_image_three'); ?>" alt="">
+    	</a>
     </div>
     <p><?php echo get_option('Ideas_featured_post_three');  ?></p>
   </section>
 </div>
 
-<section class="featured">
-  <h1>Why Us?</h1>
-  <h4>There are so many designers around Texas, but we have many things that they don't.</h4>
-  <div class="home-image"><img src="<?php bloginfo('template_directory') ?>/img/web.png"></div>
-  <div class="home-text border-left">
-  	<h2>We use the latest technology</h2>
-  	<p>Although we are a small company, we always focus on learning the latest techniques and know inoveras technologies that are changing the course of design and advertising. We offer more innovative ideas for your project and help you achieve the success you seek.</p>
-  </div>
-</section>
-
-<section class="featured">
-  <h1>Our pricing!</h1>
-  <div class="home-text border-right">
-  	<h2>The lowest prices in Texas</h2>
-  	<p>We are a company that knows the current economic situation, for that reason we offer the best prices. With us you always get more, so who charge the same as us, they always give you less. No one can compete with our prices.</p>
-  </div>
-  <div class="home-image"><img src="<?php bloginfo('template_directory') ?>/img/happy.png"></div>
-</section>
-
-<section class="featured">
-  <h1>Get Started now</h1>
-  <h4>Contact us for a free stimation of your project. Discover all that you can get and become part of our happy costumers!</h4>
-  <section class="free-button"><a href="<?php bloginfo('url') ?>/contact/"><p class="slide-button">Free Estimate</p></a></section>
-</section>
+<div id="portfolio" class="cf">
+  <h2>Latest Posts</h2>
+  <?php if (have_posts()) : while (have_posts()) : the_post(); $category = get_the_category(); ?>
+    <article class="post span4">
+      <div class="post-img">
+        <?php if ( has_post_thumbnail()) : ?>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+            <?php the_post_thumbnail('post-img'); ?>
+          </a>
+        <?php else: ?>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+            <img src="<?php bloginfo('template_directory') ?>/img/default-image.jpg" alt="no-image">
+          </a>
+        <?php endif; ?>
+      </div>
+      <a href="<?php the_permalink(); ?>">
+        <div class="post-title">
+          <h1><?php the_title() ?></h1>
+          <p><?php the_tags('Tags - ') ?></p>
+        </div>
+      <a/>
+    </article>
+  <?php endwhile; ?>
+    <div id="nav-below" class="loader">
+      <?php posts_nav_link(' &#183; ', '', '<p>Mas Entradas</p>'); ?>
+    </div>
+  <?php else: ?>
+    <h1>Hola, no existe ninguna entrada disponible. Tal vez, deberias de buscar en otra pagina, intentalo talvez tengas suerte.</h1>
+  <?php endif; ?>
 </div>
 
 <?php get_footer() ?>

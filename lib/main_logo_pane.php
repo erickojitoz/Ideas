@@ -2,6 +2,7 @@
 	if(isset($_POST["Ideas_main_logo"])){
 		$Ideas_main_logo = $_POST["Ideas_main_logo"];
 		update_option('Ideas_main_logo',$Ideas_main_logo);
+		
 	}
 	else if(get_option('Ideas_main_logo')){
 		$Ideas_main_logo = get_option('Ideas_main_logo');

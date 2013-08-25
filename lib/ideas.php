@@ -74,22 +74,96 @@ add_action( 'after_switch_theme', 'after_setup_ideas' );
 function update_links($links,$network,$mode){
 
   if($mode == "insert"){
+	
 	if($network == "skype"){
 		$links = "skype:".$links."?call";
 	}
     else if($network == "ownEmail"){
 		$links = "mailto:".$links;
+	}else if( $network == "facebook" ){
+
+		if(  stripos($links, "https://www.facebook.com/") == false ){
+			$links = "https://www.facebook.com/".$links;
+		}
+	
+	}else if( $network == "twitter" ){
+
+		if( stripos($links,"https://twitter.com/") == false ){
+			$links = "https://twitter.com/".$links;
+		}
+	
+	}else if( $network == "soundcloud" ){
+
+		if( stripos($links,"https://soundcloud.com/") == false ){
+			$links = "https://soundcloud.com/".$links;
+		}
+	
+	}else if( $network == "googleplus" ){
+
+		if( stripos($links,"https://plus.google.com/") == false ){
+			$links = "https://plus.google.com/".$links;
+		}
+	}else if( $network == "linkedin" ){
+
+		if( stripos($links,"http://www.linkedin.com/") == false ){
+			$links = "http://www.linkedin.com/".$links;
+		}
+	}else if( $network == "youtube" ){
+
+		if( stripos($links,"https://www.youtube.com/") == false ){
+			$links = "https://www.youtube.com/".$links;
+		}
+	}else if( $network == "pinterest" ){
+
+		if( stripos($links,"http://pinterest.com/") == false ){
+			$links = "http://pinterest.com/".$links;
+		}
+	}else if( $network == "instagram" ){
+
+		if( stripos($links,"http://instagram.com/") == false ){
+			$links = "http://instagram.com/".$links;
+		}
+	}else if( $network == "github" ){
+
+		if( stripos($links,"https://github.com/") == false ){
+			$links = "https://github.com/".$links;
+		}
 	}
   }
   else if($mode == "retrieve"){
-
 
 	if($network == "skype"){
 	   $links = str_replace("skype:","",$links);
 	   $links = str_replace("?call","",$links);
 	}
 	else if($network == "ownEmail"){
-		$links = str_replace("mailto:",$links);
+		$links = str_replace("mailto:","",$links);
+	}else if( $network == "facebook" ){
+		$links = str_replace("https://www.facebook.com/", "", $links);
+	
+	}else if( $network == "twitter" ){
+		$links = str_replace("https://twitter.com/", "", $links);	
+	
+	}else if( $network == "soundcloud" ){
+		$links = str_replace("https://soundcloud.com/","",$links);
+	
+	}else if ( $network == "googleplus" ) {
+		$links = str_replace("https://plus.google.com/","",$links);
+
+	}else if ( $network == "linkedin" ) {
+		$links = str_replace("http://www.linkedin.com/","",$links);
+
+	}else if ( $network == "youtube" ) {
+		$links = str_replace("https://www.youtube.com/","",$links);
+
+	}else if ( $network == "pinterest" ) {
+		$links = str_replace("http://pinterest.com/","",$links);
+
+	}else if ( $network == "instagram" ) {
+		$links = str_replace("http://instagram.com/","",$links);
+
+	}else if ( $network == "github" ) {
+		$links = str_replace("https://github.com/","",$links);
 	}
   }
 	return $links;

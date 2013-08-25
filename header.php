@@ -93,7 +93,7 @@
     <?php if( strlen( get_option("Ideas_social_network_five")) > 0){ ?>
     <div>
       <a href="<?php echo get_option("Ideas_social_network_five"); ?>">
-        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five"); ?>.png">
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five_choose"); ?>.png">
       </a>
     </div>
     <?php } ?>

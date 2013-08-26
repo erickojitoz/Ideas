@@ -62,6 +62,7 @@
   </section>
 
   <section id="top-icons">
+<<<<<<< HEAD
     <?php if( strlen( get_option("Ideas_social_network_one")) > 0){ ?>
     <div>
       <a href="<?php  echo get_option("Ideas_social_network_one"); ?>" target="_blank">
@@ -97,6 +98,48 @@
       </a>
     </div>
     <?php } ?>
+=======
+	<?php if( strlen( get_option("Ideas_social_network_one")) > 0){ ?>  
+	 <div>
+	   <a href="<?php  echo get_option("Ideas_social_network_one"); ?>" target="_blank">
+		 <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_one_choose"); ?>.png">
+	   </a>
+	 </div>
+	<?php } ?>
+	    
+	<?php if( strlen( get_option("Ideas_social_network_two")) > 0){ ?>
+	  <div>
+		  <a href="<?php echo get_option("Ideas_social_network_two");  ?>" target="_blank" >
+			<img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_two_choose"); ?>.png">
+		  </a>
+	  </div>
+	<?php } ?>
+	
+	<?php if( strlen( get_option("Ideas_social_network_three")) > 0){ ?>
+	  <div>
+	    <a href="<?php echo get_option("Ideas_social_network_three"); ?>" target="_blank" >
+		  <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_three_choose");  ?>.png">
+	    </a>
+	  </div>
+	<?php } ?>
+    
+	<?php if( strlen( get_option("Ideas_social_network_four")) > 0){ ?>
+	    <div>
+	       <a href="<?php echo get_option("Ideas_social_network_four"); ?>">
+		      <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_four_choose"); ?>.png">
+	       </a>
+	    </div>
+	<?php } ?>
+    
+	<?php if( strlen( get_option("Ideas_social_network_five")) > 0){ ?>
+	    <div>
+	      <a href="<?php echo get_option("Ideas_social_network_five"); ?>">
+		   <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five"); ?>.png">
+	      </a>
+	  </div>
+	<?php } ?>
+  
+>>>>>>> origin/victor_jobs
   </section>
     <?php if(get_option('ideas_searchform') == 'on'): ?>
     <?php get_search_form(); ?>

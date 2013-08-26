@@ -56,25 +56,25 @@ function social_networks_events(){
 			switch(indexes[i]){
 				case 1:
 					 validate[1] += "0";
-					 if( links[i].indexOf("facebook.com/") < 0  ){
+					 if( links[i].length == 0  ){
 						error_show += error_link_message[1];
 					 }
 					break
 				case 2:
 					validate[2] += "0";
-					if( links[i].indexOf("twitter.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[2];
 					 }
 					break;
 				case 3:
 					validate[3] += "0";
-					if( links[i].indexOf("soundcloud.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[3];
 					 }
 					break;
 				case 4:
 					validate[4] += "0";
-					if( links[i].indexOf("plus.google.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[4];
 					 }
 					break;
@@ -86,7 +86,7 @@ function social_networks_events(){
 					break;
 				case 6:
 					validate[6] += "0";
-					if( links[i].indexOf("linkedin.com") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[6];
 					}
 					break;
@@ -98,25 +98,25 @@ function social_networks_events(){
 					break;
 				case 8:
 					validate[8] += "0";
-					if( links[i].indexOf("www.youtube.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[8];
 					}
 					break;
 				case 9:
 					validate[9] += "0";
-					if( links[i].indexOf("pinterest.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[9];
 					}
 					break;
 				case 10:
 					validate[10] += "0";
-					if( links[i].indexOf("instagram.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[10];
 					}
 					break;
 				case 11:
 					validate[11] += "0";
-					if( links[i].indexOf("github.com/") < 0  ){
+					if( links[i].length == 0  ){
 						error_show += error_link_message[11];
 					}
 					break;

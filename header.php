@@ -63,6 +63,9 @@
 
   <section id="top-icons">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/victor_jobs
     <?php if( strlen( get_option("Ideas_social_network_one")) > 0){ ?>
     <div>
       <a href="<?php  echo get_option("Ideas_social_network_one"); ?>" target="_blank">
@@ -94,6 +97,7 @@
     <?php if( strlen( get_option("Ideas_social_network_five")) > 0){ ?>
     <div>
       <a href="<?php echo get_option("Ideas_social_network_five"); ?>">
+<<<<<<< HEAD
         <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five"); ?>.png">
       </a>
     </div>
@@ -139,6 +143,12 @@
 	  </div>
 	<?php } ?>
   
+>>>>>>> origin/victor_jobs
+=======
+        <img class="header-icon" src="<?php bloginfo('template_directory') ?>/img/<?php echo get_option("Ideas_social_network_five_choose"); ?>.png">
+      </a>
+    </div>
+    <?php } ?>
 >>>>>>> origin/victor_jobs
   </section>
     <?php if(get_option('ideas_searchform') == 'on'): ?>

@@ -53,6 +53,8 @@ add_image_size(
 	'featured-img', 220, 220, true
 );
 
+add_image_size('Ideas_featured_image_one', 400, 400, true);
+
 /* menus */
 register_nav_menus(array(
 	'hmenu' => 'Header Menu',

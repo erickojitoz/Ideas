@@ -262,6 +262,21 @@
 
 <div class="ideastab featured">
 	<?php
+
+	function editFeaturedImagePost($image){
+		
+		$dimension = "-400x400.";
+		
+		if( stripos($image, $dimension) == false ){
+			$image_data = explode(".",$image);
+			$image =  $image_data[0].$dimension.$image_data[1];
+		}
+
+		return $image;
+	}
+
+
+
 	if(isset($_POST["Ideas_featured_post_one"])){
 		$Ideas_featured_post_one = $_POST["Ideas_featured_post_one"];
 		update_option('Ideas_featured_post_one',$Ideas_featured_post_one);
@@ -287,7 +302,7 @@
 
 	if(isset($_POST["Ideas_featured_image_one"])){
 		$Ideas_featured_image_one = $_POST["Ideas_featured_image_one"];
-		update_option('Ideas_featured_image_one',$Ideas_featured_image_one);
+		update_option('Ideas_featured_image_one',editFeaturedImagePost($Ideas_featured_image_one));
 	}
 	else if(get_option('Ideas_featured_image_one')){
 		$Ideas_featured_image_one = get_option('Ideas_featured_image_one');
@@ -322,7 +337,7 @@
 
 	if(isset($_POST["Ideas_featured_image_two"])){
 		$Ideas_featured_image_two = $_POST["Ideas_featured_image_two"];
-		update_option('Ideas_featured_image_two',$Ideas_featured_image_two);
+		update_option('Ideas_featured_image_two',editFeaturedImagePost($Ideas_featured_image_two));
 	}
 	else if(get_option('Ideas_featured_image_two')){
 		$Ideas_featured_image_two = get_option('Ideas_featured_image_two');
@@ -355,7 +370,7 @@
 
 	if(isset($_POST["Ideas_featured_image_three"])){
 		$Ideas_featured_image_three = $_POST["Ideas_featured_image_three"];
-		update_option('Ideas_featured_image_three',$Ideas_featured_image_three);
+		update_option('Ideas_featured_image_three',editFeaturedImagePost($Ideas_featured_image_three));
 	}
 	else if(get_option('Ideas_featured_image_three')){
 		$Ideas_featured_image_three = get_option('Ideas_featured_image_three');
